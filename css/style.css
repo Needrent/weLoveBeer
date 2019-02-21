@@ -12,6 +12,7 @@
 body{
     background: url(/img/bg.png) #353535 no-repeat fixed;
     background-position: top center;
+    font-family: var(--main-font);
 }
 /* varibles */
 :root{
@@ -20,14 +21,39 @@ body{
     --color-hover: #A7D9D6;
     --color-article: #E1CAB6;
     --h1: "Fontjek";
+    --main-font: itc-american-typewriter, serif;
 }
+/* basic semantic tags */
 h1{
     color: var(--color-white);
     font-family: var(--h1);
     font-size: 8rem;
     line-height: 8rem;
     text-align: center;
+    margin: 0 0 3rem 0;
 }
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button{
+    font-family: var(--main-font);
+}
+/* Header */
 header{
+    margin: 1.5rem 1.5rem 0 1.5rem;
+    text-align: center;
+}
+header p{
+    color: var(--color-white);
+    font-size: 3rem;
+    line-height: 2.7rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+main{
     margin: 0 1.5rem 0 1.5rem;
 }

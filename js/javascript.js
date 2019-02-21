@@ -33,10 +33,10 @@ function displayList(data){
 
 
     if(data.gsx$image.$t == ""){
-        clone.querySelector("img").src = "/img/placeholder.png";
+        clone.querySelector("img").src = "img/placeholder.png";
     }
     else{
-        clone.querySelector("img").src ="/img/" + data.gsx$image.$t;
+        clone.querySelector("img").src ="img/" + data.gsx$image.$t;
         clone.querySelector("img").alt = data.gsx$name.$t;
     }
 

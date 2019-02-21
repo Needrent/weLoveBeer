@@ -72,53 +72,33 @@ header p{
 main{
     margin: 0 0 0 0;
 }
-#index section{
-    background: var(--color-section);
-    width: 100%;
+.burger{
     position: relative;
-    border: 0.3rem dashed black;
-    padding: 1.5rem;
-    box-sizing: border-box;
-    margin: 12rem 0 10rem 0;
-    text-align: center;
-    color: var(--color-red);
-}
-#index section h3{
-    margin: 8rem 0 0.5rem 0;
-    font-size: 3rem;
-    font-weight: bold;
-}
-#index section p{
-    text-align: left;
-}
-.profile{
-    position: absolute;
-    top: calc(-16.6rem / 2);
-    right: calc(50% - 8.3rem);
-    width: 16.6rem;
-    height: 16.6rem;
-    border: 0.3rem dashed black;
-    border-radius: 50%;
-    overflow: hidden;
-
-}
-.profile img{
-    width: 100%;
+    width: 3rem;
+    height: 3rem;
+    float: right
 }
 .navheader {
-  overflow: hidden;
+ /* overflow: hidden;*/
   background-color: #C4491D;
-  padding: 5px;
+  padding: 1.5rem;
+    height: 3rem;
+    position: relative;
 }
-.navheader a {
-  float: left;
+.navheader a, .nav a {
   color: white;
   text-align: center;
-  padding: 12px;
   text-decoration: none;
   font-size: 25px;
-  line-height: 25px;
-  font-family: "Fontjek";
+  font-family: var(--h1);
+  line-height: 3rem;
+}
+.burger span{
+    width: 100%;
+    height: 0.3rem;
+    margin: 0 0 0.5rem 0;
+    background: white;
+    display: block;
 }
 
 .navheader a.logo {
@@ -130,5 +110,19 @@ main{
 }
 
 .nav {
-  float: right;
+  width: 100%;
+    background: var(--color-red);
+    border-top: 0.3rem dashed var(--color-white);
+    position: absolute;
+    top: 6rem;
+    left: 0;
+}
+.nav a{
+    font-family: var(--main-font);
+    display: block;
+    padding: 1.5rem 0 1.5rem 0;
+    border-bottom: 0.3rem dashed var(--color-white);
+}
+.hide{
+    display: none;
 }

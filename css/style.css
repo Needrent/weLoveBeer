@@ -57,3 +57,31 @@ header p{
 main{
     margin: 0 1.5rem 0 1.5rem;
 }
+
+.navheader {
+  overflow: hidden;
+  background-color: #C4491D;
+  padding: 5px;
+}
+.navheader a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 25px;
+  line-height: 25px;
+  font-family: "Fontjek";
+}
+
+.navheader a.logo {
+  font-size: 36px;
+}
+
+.navheader a.active {
+  color: #A7D9D6;
+}
+
+.nav {
+  float: right;
+}

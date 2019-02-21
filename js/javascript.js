@@ -1,7 +1,7 @@
 const link = "https://spreadsheets.google.com/feeds/list/10k5FHg8AolohKoybFTJarvWLSzhzOe-jr8HbHa6KZwU/od6/public/values?alt=json";
 
 const section = document.querySelector("section");
-const template = document.querySelector("#monsterMash").content;
+const template = document.querySelector("template").content;
 
 
 function load(link){

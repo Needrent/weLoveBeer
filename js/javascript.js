@@ -1,3 +1,12 @@
+const burger = document.querySelector(".burger");
+const menu = document.querySelector(".nav");
+
+burger.addEventListener("click", openNav);
+
+function openNav(){
+    menu.classList.toggle("hide");
+}
+
 const link = "https://spreadsheets.google.com/feeds/list/10k5FHg8AolohKoybFTJarvWLSzhzOe-jr8HbHa6KZwU/od6/public/values?alt=json";
 
 const section = document.querySelector("section");

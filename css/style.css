@@ -10,12 +10,17 @@
     padding: 0;
     font-size: 10px;
 }
+body,html{
+    height: 100%;
+    width: 100%;
+}
 body{
     background: url(../img/bg.png) #353535 no-repeat fixed;
     background-position: top center;
     font-family: var(--main-font);
+    /*-webkit-overflow-scrolling: touch;*/
 }
-/* varibles */
+/*------------------------------------ varibles */
 :root{
     --color-red: #C4491D;
     --color-white: #F4E6D9;
@@ -24,7 +29,7 @@ body{
     --h1: "Fontjek";
     --main-font: itc-american-typewriter, serif;
 }
-/* basic semantic tags */
+/*------------------------------------ basic semantic tags */
 h1{
     color: var(--color-white);
     font-family: var(--h1);
@@ -57,7 +62,37 @@ h2{
     text-align: center;
     color: var(--color-white);
 }
-/* Header */
+/*------------------------------------ Age Check */
+#age{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #353535;
+    z-index: 9999;
+    text-align: center;
+}
+#age button{
+    padding: 1rem;
+    font-size: 3rem;
+    border-radius: 1rem;
+    border: none;
+    background: var(--color-red);
+    color: var(--color-white);
+}
+#age h2{
+    margin: 50% 0 2rem 0;
+}
+.ageAway{
+    animation: ageAway 1s ease-out forwards;
+}
+@keyframes ageAway{
+    to{
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+/*------------------------------------ Header */
 header{
     margin: 1.5rem 1.5rem 0 1.5rem;
     text-align: center;
@@ -105,7 +140,7 @@ main{
 .profile img{
     width: 100%;
 }
-/* Navigation */
+/*------------------------------------ Navigation */
 .burger, .filterBtn{
     position: relative;
     width: 3rem;
@@ -172,6 +207,11 @@ span:nth-child(2) span.dot{
     padding: 1.5rem 0 1.5rem 0;
     border-bottom: 0.3rem dashed var(--color-white);
     background: var(--color-red);
+}
+/*------------------------------------Product page*/
+section img{
+    width: 16.6rem;
+    height: auto;
 }
 /* specials for JS */
 .hide{

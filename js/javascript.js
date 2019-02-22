@@ -1,3 +1,20 @@
+const age = document.querySelector("#age");
+const ageBtn = document.querySelectorAll("button");
+
+ageBtn[1].addEventListener("click", yes)
+
+function yes(){
+    age.classList.add("ageAway");
+}
+
+ageBtn[0].addEventListener("click", no)
+
+function no(){
+    console.log("I clicked no");
+}
+
+
+
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".nav");
 const filter = document.querySelector(".filter");

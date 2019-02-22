@@ -64,10 +64,10 @@ header{
 }
 header p{
     color: var(--color-white);
-    font-size: 3rem;
-    line-height: 2.7rem;
-    margin-bottom: 3rem;
-    font-weight: bold;
+    font-size: 2.7rem;
+    line-height: 2.9rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
 }
 main{
     margin: 0 0 0 0;
@@ -105,57 +105,75 @@ main{
 .profile img{
     width: 100%;
 }
-.burger{
+/* Navigation */
+.burger, .filterBtn{
     position: relative;
     width: 3rem;
     height: 3rem;
-    float: right
+    float: right;
+    margin-left: 1rem;
 }
+.burger span, .filterBtn span{
+    width: 100%;
+    height: 0.4rem;
+    margin: 0 0 0.8rem 0;
+    background: var(--color-white);
+    display: block;
+    border-radius: 1rem;
+}
+.filterBtn span{
+    position: relative;
+}
+span.dot{
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: var(--color-red);
+    top: -0.25rem;
+    left: 0.5rem;
+    border: 0.2rem solid var(--color-white);
+}
+span:nth-child(2) span.dot{
+    left: 1.5rem;
+}
+
 .navheader {
- /* overflow: hidden;*/
-  background-color: #C4491D;
-  padding: 1.5rem;
+    background-color: #C4491D;
+    padding: 1.5rem;
     height: 3rem;
     position: relative;
 }
 .navheader a, .nav a {
-  color: white;
+  color: var(--color-white);
   text-align: center;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 2.5rem;
   font-family: var(--h1);
   line-height: 3rem;
 }
-.burger span{
-    width: 100%;
-    height: 0.3rem;
-    margin: 0 0 0.5rem 0;
-    background: white;
-    display: block;
-}
-
 .navheader a.logo {
-  font-size: 36px;
+  font-size: 3.6rem;
 }
 
 .navheader a.active {
   color: #A7D9D6;
 }
 
-.nav {
-  width: 100%;
-    background: var(--color-red);
+.nav, .filter {
+    width: 100%;
     border-top: 0.3rem dashed var(--color-white);
     position: absolute;
-    top: 6rem;
+    top: 5.7rem;
     left: 0;
 }
-.nav a{
+.nav a, .filter a{
     font-family: var(--main-font);
     display: block;
     padding: 1.5rem 0 1.5rem 0;
     border-bottom: 0.3rem dashed var(--color-white);
+    background: var(--color-red);
 }
+/* specials for JS */
 .hide{
     display: none;
 }

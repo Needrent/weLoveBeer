@@ -23,6 +23,7 @@ body{
 /*------------------------------------ varibles */
 :root{
     --color-red: #C4491D;
+    --color-pink: #E1CAB6;
     --color-white: #F4E6D9;
     --color-hover: #A7D9D6;
     --color-section: #E1CAB6;
@@ -39,9 +40,6 @@ h1{
     text-align: center;
     margin: 0 0 3rem 0;
 }
-section img{
-    background: white;
-}
 h2,
 h3,
 h4,
@@ -54,7 +52,9 @@ button{
 }
 p{
     font-size: 2rem;
-    line-height: 2.8rem;
+    line-height: 2.2rem;
+    margin-top: 2rem;
+    font-weight: 500;
 }
 h2{
     font-size: 3rem;
@@ -172,26 +172,33 @@ span:nth-child(2) span.dot{
     left: 1.5rem;
 }
 
-.navheader {
+#navheader {
     background-color: #C4491D;
     padding: 1.5rem;
     height: 3rem;
     position: relative;
+
 }
-.navheader a, .nav a {
-  color: var(--color-white);
-  text-align: center;
-  text-decoration: none;
-  font-size: 2.5rem;
-  font-family: var(--h1);
-  line-height: 3rem;
+#navheader a, .nav a {
+    color: var(--color-white);
+    text-align: center;
+    text-decoration: none;
+    font-size: 2.5rem;
+    line-height: 3rem;
 }
-.navheader a.logo {
-  font-size: 3.6rem;
+.nav a{
+    font-family: var(--font-main) !important;
+}
+#navheader a{
+    font-family: var(--h1);
+}
+#navheader a.logo {
+    font-size: 3.6rem;
+    font-weight: 100;
 }
 
-.navheader a.active {
-  color: #A7D9D6;
+#navheader a.active {
+    color: #A7D9D6;
 }
 
 .nav, .filter {
@@ -209,9 +216,58 @@ span:nth-child(2) span.dot{
     background: var(--color-red);
 }
 /*------------------------------------Product page*/
+.details{
+    display: block;
+}
+section{
+    width: 100%;
+    display: block;
+    background: var(--color-pink);
+    border: 0.5rem dashed black;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    margin: 0 0 3rem 0;
+    min-height: 49rem;
+    position: relative;
+
+}
 section img{
-    width: 16.6rem;
+    width: calc(16.6rem - 3rem);
     height: auto;
+    float: left;
+}
+section img::after{
+    content: ' ';
+    display: block;
+}
+section h2 {
+    font-size: 3rem;
+    line-height: 2.7rem;
+    text-align: left;
+    color: var(--color-red);
+}
+section h3, a, a:visited{
+    color: var(--color-red);
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+section p:last-of-type {
+    margin: 2rem 0 4rem 0;
+}
+a{
+    font-weight: bold;
+}
+.alcohol{
+    font-size: 5rem;
+    line-height: 5rem;
+    font-weight: bold;
+}
+.author{
+    position: absolute;
+    bottom: 1rem;
+    left: 1.5rem;
 }
 /* specials for JS */
 .hide{

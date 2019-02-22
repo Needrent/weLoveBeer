@@ -44,3 +44,4 @@ function displayList(data){
     section.appendChild(clone);
 }
 load(link);
+

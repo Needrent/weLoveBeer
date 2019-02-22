@@ -10,21 +10,27 @@
     padding: 0;
     font-size: 10px;
 }
+body,html{
+    height: 100%;
+    width: 100%;
+}
 body{
     background: url(../img/bg.png) #353535 no-repeat fixed;
     background-position: top center;
     font-family: var(--main-font);
+    /*-webkit-overflow-scrolling: touch;*/
 }
-/* varibles */
+/*------------------------------------ varibles */
 :root{
     --color-red: #C4491D;
+    --color-pink: #E1CAB6;
     --color-white: #F4E6D9;
     --color-hover: #A7D9D6;
     --color-section: #E1CAB6;
     --h1: "Fontjek";
     --main-font: itc-american-typewriter, serif;
 }
-/* basic semantic tags */
+/*------------------------------------ basic semantic tags */
 h1{
     color: var(--color-white);
     font-family: var(--h1);
@@ -33,9 +39,6 @@ h1{
     line-height: 8rem;
     text-align: center;
     margin: 0 0 3rem 0;
-}
-section img{
-    background: white;
 }
 h2,
 h3,
@@ -49,7 +52,9 @@ button{
 }
 p{
     font-size: 2rem;
-    line-height: 2.8rem;
+    line-height: 2.2rem;
+    margin-top: 2rem;
+    font-weight: 500;
 }
 h2{
     font-size: 3rem;
@@ -57,7 +62,37 @@ h2{
     text-align: center;
     color: var(--color-white);
 }
-/* Header */
+/*------------------------------------ Age Check */
+#age{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #353535;
+    z-index: 9999;
+    text-align: center;
+}
+#age button{
+    padding: 1rem;
+    font-size: 3rem;
+    border-radius: 1rem;
+    border: none;
+    background: var(--color-red);
+    color: var(--color-white);
+}
+#age h2{
+    margin: 50% 0 2rem 0;
+}
+.ageAway{
+    animation: ageAway 1s ease-out forwards;
+}
+@keyframes ageAway{
+    to{
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+/*------------------------------------ Header */
 header{
     margin: 1.5rem 1.5rem 0 1.5rem;
     text-align: center;
@@ -105,7 +140,7 @@ main{
 .profile img{
     width: 100%;
 }
-/* Navigation */
+/*------------------------------------ Navigation */
 .burger, .filterBtn{
     position: relative;
     width: 3rem;
@@ -137,26 +172,33 @@ span:nth-child(2) span.dot{
     left: 1.5rem;
 }
 
-.navheader {
+#navheader {
     background-color: #C4491D;
     padding: 1.5rem;
     height: 3rem;
     position: relative;
+
 }
-.navheader a, .nav a {
-  color: var(--color-white);
-  text-align: center;
-  text-decoration: none;
-  font-size: 2.5rem;
-  font-family: var(--h1);
-  line-height: 3rem;
+#navheader a, .nav a {
+    color: var(--color-white);
+    text-align: center;
+    text-decoration: none;
+    font-size: 2.5rem;
+    line-height: 3rem;
 }
-.navheader a.logo {
-  font-size: 3.6rem;
+.nav a{
+    font-family: var(--font-main) !important;
+}
+#navheader a{
+    font-family: var(--h1);
+}
+#navheader a.logo {
+    font-size: 3.6rem;
+    font-weight: 100;
 }
 
-.navheader a.active {
-  color: #A7D9D6;
+#navheader a.active {
+    color: #A7D9D6;
 }
 
 .nav, .filter {
@@ -172,6 +214,60 @@ span:nth-child(2) span.dot{
     padding: 1.5rem 0 1.5rem 0;
     border-bottom: 0.3rem dashed var(--color-white);
     background: var(--color-red);
+}
+/*------------------------------------Product page*/
+.details{
+    display: block;
+}
+section{
+    width: 100%;
+    display: block;
+    background: var(--color-pink);
+    border: 0.5rem dashed black;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    margin: 0 0 3rem 0;
+    min-height: 49rem;
+    position: relative;
+
+}
+section img{
+    width: calc(16.6rem - 3rem);
+    height: auto;
+    float: left;
+}
+section img::after{
+    content: ' ';
+    display: block;
+}
+section h2 {
+    font-size: 3rem;
+    line-height: 2.7rem;
+    text-align: left;
+    color: var(--color-red);
+}
+section h3, a, a:visited{
+    color: var(--color-red);
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+section p:last-of-type {
+    margin: 2rem 0 4rem 0;
+}
+a{
+    font-weight: bold;
+}
+.alcohol{
+    font-size: 5rem;
+    line-height: 5rem;
+    font-weight: bold;
+}
+.author{
+    position: absolute;
+    bottom: 1rem;
+    left: 1.5rem;
 }
 /* specials for JS */
 .hide{

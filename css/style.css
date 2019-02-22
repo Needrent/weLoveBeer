@@ -18,7 +18,7 @@ body{
     background: url(../img/bg.png) #353535 no-repeat fixed;
     background-position: top center;
     font-family: var(--main-font);
-    /*-webkit-overflow-scrolling: touch;*/
+    margin-top: 9rem;
 }
 /*------------------------------------ varibles */
 :root{
@@ -216,7 +216,7 @@ span:nth-child(2) span.dot{
     left: 0;
 }
 .nav a, .filter a{
-    font-family: var(--main-font);
+    font-family: var(--main-font) !important;
     display: block;
     padding: 1.5rem 0 1.5rem 0;
     border-bottom: 0.3rem dashed var(--color-white);

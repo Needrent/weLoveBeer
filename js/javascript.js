@@ -59,6 +59,7 @@ function displayList(data) {
     clone.querySelector(".brewery").textContent = data.gsx$brewery.$t;
     clone.querySelector(".alcohol").textContent =  data.gsx$alcohol.$t + " %";
     clone.querySelector(".author a").textContent = data.gsx$author.$t;
+    clone.querySelector(".author a").href = "index.html#" + data.gsx$author.$t;
     clone.querySelector("p").textContent = data.gsx$shortdescription.$t;
 
     if (data.gsx$season.$t == "1") {

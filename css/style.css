@@ -67,8 +67,8 @@ h2{
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
     background: #353535;
     z-index: 9999;
     text-align: center;
@@ -82,7 +82,7 @@ h2{
     color: var(--color-white);
 }
 #age h2{
-    margin: 50% 0 2rem 0;
+    margin: 45vh 0 2rem 0;
 }
 .ageAway{
     animation: ageAway 1s ease-out forwards;

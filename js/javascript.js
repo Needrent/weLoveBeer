@@ -1,3 +1,4 @@
+// Age check
 const age = document.querySelector("#age");
 const ageBtn = document.querySelectorAll("button");
 
@@ -23,7 +24,7 @@ function no() {
         ageText.textContent = "Go Away!";
     }
 }
-
+// Menu
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".nav");
 const burgerElem = document.querySelectorAll(".burger span");
@@ -33,7 +34,14 @@ const filterDot = document.querySelectorAll(".dot");
 
 burger.addEventListener("click", openNav);
 
+// Menu animation
 function openNav() {
+    //reset filter button
+    filter.classList.add("hide");
+    filterDot[0].classList.remove("filterSlideTop");
+    filterDot[1].classList.remove("filterSlideMiddle");
+    filterDot[2].classList.remove("filterSlideBottom");
+
     menu.classList.toggle("hide");
     burgerElem[0].classList.toggle("menuOpened");
     setTimeout(next, 100)
@@ -46,17 +54,32 @@ function openNav() {
     function last() {
         burgerElem[2].classList.toggle("menuOpened");
     }
-
 }
-    filterBtn.addEventListener("click", openFilter);
+// Filter animation
+filterBtn.addEventListener("click", openFilter);
 
-    function openFilter() {
-        filter.classList.toggle("hide");
-        filterDot[0].classList.toggle("filterSlideTop");
-        filterDot[1].classList.toggle("filterSlideMiddle");
-        filterDot[2].classList.toggle("filterSlideBottom");
+function openFilter() {
+    //Menu reset
+    menu.classList.add("hide");
+    burgerElem[0].classList.remove("menuOpened");
+    setTimeout(next, 100)
+
+    function next() {
+        burgerElem[1].classList.remove("menuOpened");
+        setTimeout(last, 100)
     }
 
+    function last() {
+        burgerElem[2].classList.remove("menuOpened");
+    }
+
+
+    filter.classList.toggle("hide");
+    filterDot[0].classList.toggle("filterSlideTop");
+    filterDot[1].classList.toggle("filterSlideMiddle");
+    filterDot[2].classList.toggle("filterSlideBottom");
+}
+//
     const link = "https://spreadsheets.google.com/feeds/list/10k5FHg8AolohKoybFTJarvWLSzhzOe-jr8HbHa6KZwU/od6/public/values?alt=json";
 
     const section = document.querySelector("main");

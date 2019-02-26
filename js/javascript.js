@@ -39,10 +39,10 @@ burger.addEventListener("click", openNav);
 // Menu animation
 function openNav() {
     //reset filter button
-    filter.classList.add("hide");
+    /*filter.classList.add("hide");
     filterDot[0].classList.remove("filterSlideTop");
     filterDot[1].classList.remove("filterSlideMiddle");
-    filterDot[2].classList.remove("filterSlideBottom");
+    filterDot[2].classList.remove("filterSlideBottom");*/
 
     //menu animation + activation
     menu.classList.toggle("hide");
@@ -66,7 +66,7 @@ filterBtn.addEventListener("click", openFilter);
 
 function openFilter() {
     //Menu reset
-    menu.classList.add("hide");
+    /*menu.classList.add("hide");
     burgerElem[0].classList.remove("menuOpened");
     setTimeout(next, 100)
 
@@ -77,7 +77,7 @@ function openFilter() {
 
     function last() {
         burgerElem[2].classList.remove("menuOpened");
-    }
+    }*/
 
     //filter animation + activation
     filter.classList.toggle("hide");

@@ -85,3 +85,13 @@ header{
 .hide{
     display: none;
 }
+
+
+.burger
+{
+  display: block;
+  position: relative;
+  text-align: center;
+  align-content: center;
+  z-index: 1;
+}

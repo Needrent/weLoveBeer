@@ -1,27 +1,32 @@
 @import url("https://use.typekit.net/gru8nks.css");
-@font-face{
+
+@font-face {
     src: url(../font/Fontjek.ttf);
     /*src: url(../font/Fontjek.otf);*/
     font-family: "Fontjek";
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-size: 10px;
 }
-body,html{
+
+body,
+html {
     height: 100%;
     width: 100%;
 }
-body{
+
+body {
     background: url(../img/bg.png) #353535 no-repeat fixed;
     background-position: top center;
     font-family: var(--main-font);
     margin-top: 9rem;
 }
+
 /*------------------------------------ varibles */
-:root{
+:root {
     --color-red: #C4491D;
     --color-pink: #E1CAB6;
     --color-white: #F4E6D9;
@@ -30,8 +35,9 @@ body{
     --h1: "Fontjek";
     --main-font: itc-american-typewriter, serif;
 }
+
 /*------------------------------------ basic semantic tags */
-h1{
+h1 {
     color: var(--color-white);
     font-family: var(--h1);
     font-weight: 100;
@@ -40,6 +46,7 @@ h1{
     text-align: center;
     margin: 0 0 3rem 0;
 }
+
 h2,
 h3,
 h4,
@@ -47,23 +54,26 @@ h5,
 h6,
 p,
 a,
-button{
+button {
     font-family: var(--main-font);
 }
-p{
+
+p {
     font-size: 2rem;
     line-height: 2.2rem;
     margin-top: 2rem;
     font-weight: 500;
 }
-h2{
+
+h2 {
     font-size: 3rem;
     line-height: 2.7rem;
     text-align: center;
     color: var(--color-white);
 }
+
 /*------------------------------------ Age Check */
-#age{
+#age {
     position: fixed;
     top: 0;
     left: 0;
@@ -73,7 +83,8 @@ h2{
     z-index: 9999;
     text-align: center;
 }
-#age button{
+
+#age button {
     padding: 1rem;
     font-size: 3rem;
     border-radius: 1rem;
@@ -81,35 +92,42 @@ h2{
     background: var(--color-red);
     color: var(--color-white);
 }
-#age h2{
+
+#age h2 {
     margin: 45vh 0 2rem 0;
 }
-.ageAway{
+
+.ageAway {
     animation: ageAway 1s ease-out forwards;
 }
-@keyframes ageAway{
-    to{
+
+@keyframes ageAway {
+    to {
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
     }
 }
+
 /*------------------------------------ Header */
-header{
+header {
     margin: 1.5rem 1.5rem 0 1.5rem;
     text-align: center;
 }
-header p{
+
+header p {
     color: var(--color-white);
     font-size: 2.7rem;
     line-height: 2.9rem;
     margin-bottom: 2rem;
     font-weight: 500;
 }
-main{
+
+main {
     margin: 0 0 0 0;
 }
-#index section{
+
+#index section {
     background: var(--color-section);
     width: 100%;
     position: relative;
@@ -121,15 +139,18 @@ main{
     color: var(--color-red);
     min-height: inherit;
 }
-#index section h3{
+
+#index section h3 {
     margin: 8rem 0 0.5rem 0;
     font-size: 3rem;
     font-weight: bold;
 }
-#index section p{
+
+#index section p {
     text-align: left;
 }
-.profile{
+
+.profile {
     position: absolute;
     top: calc(-16.6rem / 2);
     right: calc(50% - 8.3rem);
@@ -140,18 +161,23 @@ main{
     overflow: hidden;
 
 }
-.profile img{
+
+.profile img {
     width: 100%;
 }
+
 /*------------------------------------ Navigation */
-.burger, .filterBtn{
+.burger,
+.filterBtn {
     position: relative;
     width: 3rem;
     height: 3rem;
     float: right;
     margin-left: 1rem;
 }
-.burger span, .filterBtn span{
+
+.burger span,
+.filterBtn span {
     width: 100%;
     height: 0.4rem;
     margin: 0 0 0.8rem 0;
@@ -160,10 +186,12 @@ main{
     border-radius: 1rem;
     transition: 1s;
 }
-.filterBtn span{
+
+.filterBtn span {
     position: relative;
 }
-span.dot{
+
+span.dot {
     position: absolute;
     width: 0.5rem;
     height: 0.5rem;
@@ -173,7 +201,8 @@ span.dot{
     border: 0.2rem solid var(--color-white);
     pointer-events: none;
 }
-span:nth-child(2) span.dot{
+
+span:nth-child(2) span.dot {
     left: 1.5rem;
 }
 
@@ -188,7 +217,9 @@ span:nth-child(2) span.dot{
     z-index: 8999;
 
 }
-#navheader a, .nav a {
+
+#navheader a,
+.nav a {
     color: var(--color-white);
     text-align: center;
     text-decoration: none;
@@ -196,12 +227,15 @@ span:nth-child(2) span.dot{
     line-height: 3rem;
     margin: 0;
 }
-.nav a{
+
+.nav a {
     font-family: var(--font-main) !important;
 }
-#navheader a{
+
+#navheader a {
     font-family: var(--h1);
 }
+
 #navheader a.logo {
     font-size: 3.6rem;
     font-weight: 100;
@@ -211,77 +245,94 @@ span:nth-child(2) span.dot{
     color: #A7D9D6;
 }
 
-.nav, .filter {
+.nav,
+.filter {
     width: 100%;
     border-top: 0.3rem dashed var(--color-white);
     position: absolute;
     top: 5.7rem;
     left: 0;
 }
-.nav a, .filter a{
+
+.nav a,
+.filter a {
     font-family: var(--main-font) !important;
     display: block;
     padding: 1.5rem 0 1.5rem 0;
     border-bottom: 0.3rem dashed var(--color-white);
     background: var(--color-red);
 }
+
 /*------------------------------------Navigation Animations*/
 /* Menu points animation */
-.active{
+.active {
     text-decoration: underline !important;
 }
-.filterAnimations{
+
+.filterAnimations {
     animation: filterAnimations 0.5s ease-out forwards;
 }
-@keyframes filterAnimations{
-    from{
+
+@keyframes filterAnimations {
+    from {
         transform: translateX(0);
     }
-    from{
+
+    from {
         transform: translateX(100%);
     }
 }
-.menuOpened{
-    transform:rotate(140deg);
+
+.menuOpened {
+    transform: rotate(140deg);
 }
-.filterSlideTop{
+
+.filterSlideTop {
     animation: filterSlideTop 1s ease infinite;
 }
-.filterSlideMiddle{
+
+.filterSlideMiddle {
     animation: filterSlideMiddle 1s ease infinite;
 }
-.filterSlideBottom{
+
+.filterSlideBottom {
     animation: filterSlideTop 1.4s ease infinite;
 }
-@keyframes filterSlideTop{
-    0%{
+
+@keyframes filterSlideTop {
+    0% {
         left: 0.5rem;
     }
-    50%{
+
+    50% {
         left: 1.5rem;
     }
-    100%{
+
+    100% {
         left: 0.5rem;
     }
 }
-@keyframes filterSlideMiddle{
-    0%{
+
+@keyframes filterSlideMiddle {
+    0% {
         left: 1.5rem;
     }
-    50%{
+
+    50% {
         left: 0.5rem;
     }
-    100%{
+
+    100% {
         left: 1.5rem;
     }
 }
------------------------------------Product page*/
-.details{
+
+-----------------------------------Product page*/ .details {
     display: block;
 }
 
 
-section{
+section {
     width: 100%;
     display: block;
     background: var(--color-pink);
@@ -293,46 +344,57 @@ section{
     position: relative;
 
 }
-section img{
+
+section img {
     width: calc(16.6rem - 3rem);
     height: auto;
     float: left;
 }
-section img::after{
+
+section img::after {
     content: ' ';
     display: block;
 }
+
 section h2 {
     font-size: 3rem;
     line-height: 2.7rem;
     text-align: left;
     color: var(--color-red);
 }
-section h3, a, a:visited{
+
+section h3,
+a,
+a:visited {
     color: var(--color-red);
     font-weight: 500;
     font-size: 2rem;
     line-height: 2.2rem;
     margin-bottom: 0.5rem;
 }
+
 section p:last-of-type {
     margin: 2rem 0 4rem 0;
 }
-a{
+
+a {
     font-weight: bold;
 }
-.alcohol{
+
+.alcohol {
     font-size: 5rem;
     line-height: 5rem;
     font-weight: bold;
 }
-.author{
+
+.author {
     position: absolute;
     bottom: 1rem;
     left: 1.5rem;
 }
+
 /* specials for JS */
-.hide{
+.hide {
     display: none;
 }
 
@@ -343,8 +405,9 @@ a{
     position: relative;
     margin-bottom: 5rem;
 }
+
 .see {
-    display:inline-block;
+    display: inline-block;
     text-align: center;
     border: none;
     outline: none;
@@ -364,7 +427,50 @@ a{
     text-align: center;
     align-content: center;
 }
+
 /* Types */
-#types section{
+#types section {
     min-height: inherit !important;
+}
+
+@media (min-width: 768px) {
+    main {
+        width: 90%;
+        margin: auto;
+    }
+
+    main#beers {
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1080px) {
+    header {
+        margin: 1.5rem 20% 0 20%;
+    }
+
+    main {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1.5rem;
+    }
+
+    main#beers {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 3rem;
+    }
+
+    h2,
+    .bttn {
+        grid-column-start: -1;
+        grid-column-end: 1;
+    }
+
+    #index section {
+        margin: 9rem 0 4rem 0;
+    }
 }

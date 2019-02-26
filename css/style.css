@@ -278,6 +278,8 @@ span:nth-child(2) span.dot{
 .details{
     display: block;
 }
+
+
 section{
     width: 100%;
     display: block;
@@ -332,3 +334,27 @@ a{
 .hide{
     display: none;
 }
+
+.bttn {
+    display: block;
+    text-align: center;
+    align-content: center;
+    position: relative;
+    margin-bottom: 5rem;
+}
+.see {
+    display:inline-block;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: #C4491D;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 25px;
+    width: 20rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin: 1rem;
+}
+

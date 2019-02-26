@@ -108,6 +108,7 @@ function displayList(data) {
     clone.querySelector(".author a").textContent = data.gsx$author.$t;
     clone.querySelector(".author a").href = "index.html#" + data.gsx$author.$t;
     clone.querySelector("p").textContent = data.gsx$shortdescription.$t;
+    clone.querySelector("section").classList.add(data.gsx$author.$t);
 
     if (data.gsx$season.$t == "1") {
         clone.querySelector(".season").textContent = "Seasonal";
@@ -122,3 +123,24 @@ function displayList(data) {
     section.appendChild(clone);
 }
 load(link);
+
+let filter2 = document.querySelectorAll(".filter2");
+
+console.log(filter2);
+
+filter2.forEach(filterOut);
+
+function filterOut(a) {
+    a.addEventListener("click", e => {
+        const all = document.querySelectorAll(".list-item")
+        console.log(e.target.dataset.filter);
+        all.forEach(a => {
+            if (a.classList.contains(e.target.dataset.filter)) {
+                a.classList.remove("hide");
+            } else {
+                a.classList.add("hide");
+            }
+        })
+
+    });
+};

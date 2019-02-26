@@ -363,3 +363,7 @@ a{
     text-align: center;
     align-content: center;
 }
+/* Types */
+#types section{
+    min-height: inherit !important;
+}

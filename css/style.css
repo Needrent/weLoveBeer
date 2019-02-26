@@ -119,6 +119,7 @@ main{
     margin: 12rem 0 10rem 0;
     text-align: center;
     color: var(--color-red);
+    min-height: inherit;
 }
 #index section h3{
     margin: 8rem 0 0.5rem 0;
@@ -362,4 +363,8 @@ a{
     display: block;
     text-align: center;
     align-content: center;
+}
+/* Types */
+#types section{
+    min-height: inherit !important;
 }

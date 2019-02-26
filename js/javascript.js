@@ -65,7 +65,7 @@ function openFilter() {
 // products JSON
 const link = "https://spreadsheets.google.com/feeds/list/10k5FHg8AolohKoybFTJarvWLSzhzOe-jr8HbHa6KZwU/od6/public/values?alt=json";
 
-const section = document.querySelector("main");
+const section = document.querySelector("#beers");
 const template = document.querySelector("template").content;
 
 function load(link) {

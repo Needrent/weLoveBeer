@@ -134,6 +134,8 @@ main {
 a:hover, .active{
     /*text-decoration: underline;*/
     border-bottom: 0.3rem dashed var(--color-white);
+    transition: 0.5s;
+    transition-delay: 0.1s;
 }
 .logo:hover{
     text-decoration: none;
@@ -141,8 +143,6 @@ a:hover, .active{
 
 }
 a{
-    transition: 0.5s;
-    transition-delay: 0.1s;
     border-bottom: 0;
 }
 

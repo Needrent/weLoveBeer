@@ -354,7 +354,13 @@ a:visited {
     font-weight: 500;
     font-size: 2rem;
     line-height: 2.2rem;
-    margin-bottom: 0.5rem;
+
+}
+section h3:first-of-type{
+        margin-bottom: 0.5rem;
+}
+.details h3:first-of-type{
+        margin-bottom: 0;
 }
 
 section p:last-of-type {
@@ -365,16 +371,20 @@ a {
     font-weight: bold;
 }
 
-.alcohol {
-    font-size: 5rem;
-    line-height: 5rem;
-    font-weight: bold;
+section a:hover{
+    border: none;
 }
-
 .author {
     position: absolute;
     bottom: 1rem;
     left: 1.5rem;
+}
+.brewery::before{
+    content: "made by";
+    margin-right: 0.5rem;
+    font-family: var(--h1);
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
 }
 
 /* specials for JS */

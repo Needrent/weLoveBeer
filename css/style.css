@@ -22,7 +22,7 @@ body {
     background: url(../img/bg.png) #353535 no-repeat fixed;
     background-position: top center;
     font-family: var(--main-font);
-    margin-top: 9rem;
+    margin-top: 15rem;
 }
 
 /*------------------------------------ varibles */
@@ -131,11 +131,19 @@ main {
 
 /*------------------------------------ Navigation */
 /* Menu animations */
-a:hover, .active{
+a:visited, a:active{
+    transition: none !important;
+    transition-delay: 0;
+}
+a:hover{
     /*text-decoration: underline;*/
     border-bottom: 0.3rem dashed var(--color-white);
     transition: 0.5s;
     transition-delay: 0.1s;
+}
+.active{
+    border-bottom: 0.3rem dashed var(--color-white);
+    transition: 0.5s;
 }
 .logo:hover{
     text-decoration: none;
@@ -149,7 +157,7 @@ a{
 nav {
     background-color: #C4491D;
     padding: 1.5rem;
-    height: 3rem;
+    height: 7rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -166,8 +174,12 @@ nav a{
     color: var(--color-white) !important;
     text-decoration: none;
 }
-ul{
+ul {
+    text-align: center;
+    width: 100%;
+    display: block;
     float: right;
+    height: 4rem;
 }
 ul li{
     color: var(--color-white);
@@ -179,14 +191,16 @@ ul li{
     font-family: var(--font-main) !important;
     list-style: none;
     display: inline-block;
-
 }
+    li:first-of-type {
+        margin-left: 0;
+    }
 /* filters */
 .burger,
 .filterBtn {
     position: relative;
     width: 3rem;
-    height: 3rem;
+    /*height: 3rem;*/
     float: right;
     margin-left: 1rem;
 }
@@ -224,7 +238,7 @@ span:nth-child(2) span.dot {
     width: 100%;
     border-top: 0.3rem dashed var(--color-white);
     position: absolute;
-    top: 5.7rem;
+    top: 9.7rem;
     left: 0;
 }
 
@@ -440,6 +454,13 @@ a {
 }
 /*------------------------------------ Media Query */
 @media (min-width: 768px) {
+    body {
+    margin-top: 9rem;
+}
+    nav {
+
+        height: 5rem;
+    }
     main {
         width: 90%;
         margin: auto;
@@ -450,6 +471,22 @@ a {
         display: grid;
         grid-column-gap: 1.5rem;
     }
+    ul {
+    height: 2rem;
+    }
+    .filter {
+    top: 7.7rem;
+    }
+    .filter a {
+    font-family: var(--main-font) !important;
+    display: inline-block;
+    padding: 1.5rem 0 1.5rem 0;
+    border-bottom: 0.3rem dashed var(--color-white);
+    background: var(--color-red);
+    margin: 0;
+    padding: 1.5rem;
+    float: right;
+}
 }
 
 @media (min-width: 1080px) {

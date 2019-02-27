@@ -423,8 +423,17 @@ section a:hover{
 }
 
 /* Types */
-#types section {
+/*#types section {
     min-height: inherit !important;
+}*/
+#types section {
+    overflow: hidden;
+    min-height: 6rem;
+    height: 0;
+    margin: 0 0 1.5rem 0;
+}
+.open{
+    height: 100% !important;
 }
 /*------------------------------------ Age Check */
 #age {

@@ -5,7 +5,7 @@ const ageBtn = document.querySelectorAll("button");
 ageBtn[1].addEventListener("click", yes)
 
 function yes() {
-    window.location = "/about.html";
+    window.location = "https://needrent.github.io/weLoveBeer/about.html";
 }
 
 ageBtn[0].addEventListener("click", no)

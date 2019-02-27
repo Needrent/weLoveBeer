@@ -506,6 +506,11 @@ section a:hover{
     padding: 1.5rem;
     float: right;
 }
+    main#types {
+        grid-template-columns: 1fr;
+        display: grid;
+        grid-column-gap: 1.5rem;
+    }
 }
 
 @media (min-width: 1080px) {
@@ -534,5 +539,8 @@ section a:hover{
 
     #index section {
         margin: 9rem 0 4rem 0;
+    }
+        main#types {
+        width: 50%;
     }
 }

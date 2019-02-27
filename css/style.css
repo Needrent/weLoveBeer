@@ -72,43 +72,6 @@ h2 {
     color: var(--color-white);
 }
 
-/*------------------------------------ Age Check */
-#age {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #353535;
-    z-index: 9999;
-    text-align: center;
-}
-
-#age button {
-    padding: 1rem;
-    font-size: 3rem;
-    border-radius: 1rem;
-    border: none;
-    background: var(--color-red);
-    color: var(--color-white);
-}
-
-#age h2 {
-    margin: 45vh 0 2rem 0;
-}
-
-.ageAway {
-    animation: ageAway 1s ease-out forwards;
-}
-
-@keyframes ageAway {
-    to {
-        transform: translateY(-100%);
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
 /*------------------------------------ Header */
 header {
     margin: 1.5rem 1.5rem 0 1.5rem;
@@ -167,6 +130,58 @@ main {
 }
 
 /*------------------------------------ Navigation */
+/* Menu animations */
+a:hover, .active{
+    /*text-decoration: underline;*/
+    border-bottom: 0.3rem dashed var(--color-white);
+}
+.logo:hover{
+    text-decoration: none;
+    border-bottom: 0;
+
+}
+a{
+    transition: 0.5s;
+    transition-delay: 0.1s;
+    border-bottom: 0;
+}
+
+nav {
+    background-color: #C4491D;
+    padding: 1.5rem;
+    height: 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 8999;
+}
+.logo{
+    font-size: 3.6rem;
+    font-weight: 100;
+    text-decoration: none;
+    font-family: var(--h1)
+}
+nav a{
+    color: var(--color-white) !important;
+    text-decoration: none;
+}
+ul{
+    float: right;
+}
+ul li{
+    color: var(--color-white);
+    text-align: center;
+    text-decoration: none;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin: 0 0 0 1.5rem;
+    font-family: var(--font-main) !important;
+    list-style: none;
+    display: inline-block;
+
+}
+/* filters */
 .burger,
 .filterBtn {
     position: relative;
@@ -205,47 +220,6 @@ span.dot {
 span:nth-child(2) span.dot {
     left: 1.5rem;
 }
-
-#navheader {
-    background-color: #C4491D;
-    padding: 1.5rem;
-    height: 3rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 8999;
-
-}
-
-#navheader a,
-.nav a {
-    color: var(--color-white);
-    text-align: center;
-    text-decoration: none;
-    font-size: 2.5rem;
-    line-height: 3rem;
-    margin: 0;
-}
-
-.nav a {
-    font-family: var(--font-main) !important;
-}
-
-#navheader a {
-    font-family: var(--h1);
-}
-
-#navheader a.logo {
-    font-size: 3.6rem;
-    font-weight: 100;
-}
-
-#navheader a.active {
-    color: #A7D9D6;
-}
-
-.nav,
 .filter {
     width: 100%;
     border-top: 0.3rem dashed var(--color-white);
@@ -254,21 +228,17 @@ span:nth-child(2) span.dot {
     left: 0;
 }
 
-.nav a,
 .filter a {
     font-family: var(--main-font) !important;
     display: block;
     padding: 1.5rem 0 1.5rem 0;
     border-bottom: 0.3rem dashed var(--color-white);
     background: var(--color-red);
+    margin: 0;
 }
 
-/*------------------------------------Navigation Animations*/
+/* filter Animations*/
 /* Menu points animation */
-.active {
-    text-decoration: underline !important;
-}
-
 .filterAnimations {
     animation: filterAnimations 0.5s ease-out forwards;
 }
@@ -432,7 +402,43 @@ a {
 #types section {
     min-height: inherit !important;
 }
+/*------------------------------------ Age Check */
+#age {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #353535;
+    z-index: 9999;
+    text-align: center;
+}
 
+#age button {
+    padding: 1rem;
+    font-size: 3rem;
+    border-radius: 1rem;
+    border: none;
+    background: var(--color-red);
+    color: var(--color-white);
+}
+
+#age h2 {
+    margin: 45vh 0 2rem 0;
+}
+
+.ageAway {
+    animation: ageAway 1s ease-out forwards;
+}
+
+@keyframes ageAway {
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+/*------------------------------------ Media Query */
 @media (min-width: 768px) {
     main {
         width: 90%;

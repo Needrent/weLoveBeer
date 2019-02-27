@@ -1,57 +1,13 @@
 // Menu
-const burger = document.querySelector(".burger");
-const menu = document.querySelector(".nav");
-const menuElem = document.querySelectorAll(".nav a");
-const burgerElem = document.querySelectorAll(".burger span");
 const filter = document.querySelector(".filter");
 const filterElem = document.querySelectorAll(".filter a");
 const filterBtn = document.querySelector(".filterBtn");
 const filterDot = document.querySelectorAll(".dot");
 
-burger.addEventListener("click", openNav);
-
-// Menu animation
-function openNav() {
-    //reset filter button
-    /*filter.classList.add("hide");
-    filterDot[0].classList.remove("filterSlideTop");
-    filterDot[1].classList.remove("filterSlideMiddle");
-    filterDot[2].classList.remove("filterSlideBottom");*/
-
-    //menu animation + activation
-    menu.classList.toggle("hide");
-    burgerElem[0].classList.toggle("menuOpened");
-    setTimeout(next, 100)
-
-    function next() {
-        burgerElem[1].classList.toggle("menuOpened");
-        setTimeout(last, 100)
-    }
-
-    function last() {
-        burgerElem[2].classList.toggle("menuOpened");
-    }
-        menuElem.forEach(function(elem){
-        elem.classList.toggle("filterAnimations");
-    });
-}
 // Filter animation
 filterBtn.addEventListener("click", openFilter);
 
 function openFilter() {
-    //Menu reset
-    /*menu.classList.add("hide");
-    burgerElem[0].classList.remove("menuOpened");
-    setTimeout(next, 100)
-
-    function next() {
-        burgerElem[1].classList.remove("menuOpened");
-        setTimeout(last, 100)
-    }
-
-    function last() {
-        burgerElem[2].classList.remove("menuOpened");
-    }*/
 
     //filter animation + activation
     filter.classList.toggle("hide");

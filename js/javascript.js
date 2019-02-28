@@ -8,15 +8,30 @@ const filterDot = document.querySelectorAll(".dot");
 filterBtn.addEventListener("click", openFilter);
 
 function openFilter() {
-
     //filter animation + activation
-    filter.classList.toggle("hide");
-    filterDot[0].classList.toggle("filterSlideTop");
-    filterDot[1].classList.toggle("filterSlideMiddle");
-    filterDot[2].classList.toggle("filterSlideBottom");
-    filterElem.forEach(function(elem){
+    filter.classList.add("animateIn");
+    filter.classList.remove("animateOut");
+    filterDot[0].classList.add("filterSlideTop");
+    filterDot[1].classList.add("filterSlideMiddle");
+    filterDot[2].classList.add("filterSlideBottom");
+    filterBtn.removeEventListener("click", openFilter);
+    filterBtn.addEventListener("click", closeFilter);
+   /* filterElem.forEach(function(elem){
         elem.classList.toggle("filterAnimations");
-    });
+    });*/
+}
+
+function closeFilter() {
+    //filter animation + activation
+    filter.classList.remove("animateIn");
+    filter.classList.add("animateOut");
+    filterDot[0].classList.remove("filterSlideTop");
+    filterDot[1].classList.remove("filterSlideMiddle");
+    filterDot[2].classList.remove("filterSlideBottom");
+    filterBtn.addEventListener("click", openFilter);
+   /* filterElem.forEach(function(elem){
+        elem.classList.toggle("filterAnimations");
+    });*/
 }
 // products JSON
 const link = "https://spreadsheets.google.com/feeds/list/10k5FHg8AolohKoybFTJarvWLSzhzOe-jr8HbHa6KZwU/od6/public/values?alt=json";

@@ -239,7 +239,7 @@ span:nth-child(2) span.dot {
     border-top: 0.3rem dashed var(--color-white);
     position: absolute;
     top: 9.7rem;
-    left: 0;
+    right: -100%;
 }
 
 .filter a {
@@ -250,11 +250,24 @@ span:nth-child(2) span.dot {
     background: var(--color-red);
     margin: 0;
 }
-
+.animateIn{
+    animation: animateIn 1s forwards ease-out;
+}
+@keyframes animateIn{
+    to{ right: 0;}
+}
+.animateOut{
+    animation: animateOut 1s forwards ease-in;
+}
+@keyframes animateOut{
+    from{ right: 0;}
+    to{ right: -100%;}
+}
 /* filter Animations*/
 /* Menu points animation */
 .filterAnimations {
     animation: filterAnimations 0.5s ease-out forwards;
+    animation-delay: 1.2s;
 }
 
 @keyframes filterAnimations {
